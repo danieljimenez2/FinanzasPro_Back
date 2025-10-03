@@ -1,4 +1,4 @@
-package finanzas_pro.modells.entities;
+package finanzas_pro.models.entities;
 
 
 import jakarta.persistence.*;
@@ -58,8 +58,9 @@ public class Precio_Y_Datos_Generales {
     private BigDecimal maximo52s;
 
     // Enums
-    public enum TamanoMercado { BIG_CAP, MICRO_CAP, MID_CAP, SMALL_CAP }
-    public enum SituacionCaja { CAJA_NETA, DEUDA_NETA }
+    public enum TamanoMercado {BIG_CAP, MICRO_CAP, MID_CAP, SMALL_CAP}
+
+    public enum SituacionCaja {CAJA_NETA, DEUDA_NETA}
 
     public String getCompanySymbol() {
         return companySymbol;

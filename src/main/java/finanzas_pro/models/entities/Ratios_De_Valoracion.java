@@ -1,4 +1,4 @@
-package finanzas_pro.modells.entities;
+package finanzas_pro.models.entities;
 
 import jakarta.persistence.*;
 
@@ -22,7 +22,7 @@ public class Ratios_De_Valoracion {
 
     @Column(name = "precio_ventas", precision = 36, scale = 16)
     private BigDecimal precioVentas;
-    
+
     @Column(name = "precio_fcf", precision = 36, scale = 16)
     private BigDecimal precioFcf;
 

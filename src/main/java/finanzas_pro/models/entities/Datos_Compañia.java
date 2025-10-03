@@ -1,8 +1,8 @@
-package finanzas_pro.modells.entities;
+package finanzas_pro.models.entities;
 
 import jakarta.persistence.*;
+
 import java.util.Date;
-import java.math.BigDecimal;
 
 @Entity
 @Table(name = "datos_compañia")
@@ -20,28 +20,28 @@ public class Datos_Compañia {
     @Column(name = "moneda", length = 3)
     private String moneda;
 
-    @Column(name = "ISIN",columnDefinition = "TINYTEXT")
+    @Column(name = "ISIN", columnDefinition = "TINYTEXT")
     private String ISIN;
 
-    @Column(name = "bolsa",length = 100)
+    @Column(name = "bolsa", length = 100)
     private String bolsa;
 
-    @Column(name = "sector",length = 100)
+    @Column(name = "sector", length = 100)
     private String sector;
 
-    @Column(name = "industria",length = 100)
+    @Column(name = "industria", length = 100)
     private String industria;
 
-    @Column(name = "país",length = 100)
-    private String país;
+    @Column(name = "país", length = 100)
+    private String pais;
 
-    @Column(name="empleados")
+    @Column(name = "empleados")
     private int empleados;
 
-    @Column(name = "CEO",length = 150)
+    @Column(name = "CEO", length = 150)
     private String CEO;
 
-    @Column(name = "web",length = 200)
+    @Column(name = "web", length = 200)
     private String web;
 
     @Column(name = "fecha_Ipo")
@@ -103,12 +103,12 @@ public class Datos_Compañia {
         this.industria = industria;
     }
 
-    public String getPaís() {
-        return país;
+    public String getPais() {
+        return pais;
     }
 
     public void setPaís(String país) {
-        this.país = país;
+        this.pais = país;
     }
 
     public int getEmpleados() {

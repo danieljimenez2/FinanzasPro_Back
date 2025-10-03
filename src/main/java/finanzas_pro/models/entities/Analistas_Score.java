@@ -1,6 +1,7 @@
-package finanzas_pro.modells.entities;
+package finanzas_pro.models.entities;
 
 import jakarta.persistence.*;
+
 import java.math.BigDecimal;
 
 @Entity

@@ -8,7 +8,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "datos_empresa")
-public class Datos_Empresa {
+public class DatosEmpresa {
 
     @Id
     @Column(name = "company_symbol", nullable = false)

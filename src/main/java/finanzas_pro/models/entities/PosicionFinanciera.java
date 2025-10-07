@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 
 @Entity
 @Table(name = "posicion_financiera")
-public class Posicion_Financiera {
+public class PosicionFinanciera {
 
     @Id
     @Column(name = "company_symbol", length = 50, nullable = false)
@@ -15,7 +15,7 @@ public class Posicion_Financiera {
     @OneToOne
     @MapsId
     @JoinColumn(name = "company_symbol")
-    private Datos_Empresa datosEmpresa;
+    private DatosEmpresa datosEmpresa;
 
     @Column(name = "deuda_equity", precision = 36, scale = 16)
     private BigDecimal deudaEquity;
@@ -61,11 +61,11 @@ public class Posicion_Financiera {
         this.companySymbol = companySymbol;
     }
 
-    public Datos_Empresa getDatosEmpresa() {
+    public DatosEmpresa getDatosEmpresa() {
         return datosEmpresa;
     }
 
-    public void setDatosEmpresa(Datos_Empresa datosEmpresa) {
+    public void setDatosEmpresa(DatosEmpresa datosEmpresa) {
         this.datosEmpresa = datosEmpresa;
     }
 

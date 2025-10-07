@@ -6,7 +6,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "datos_compañia")
-public class Datos_Compañia {
+public class DatosCompañia {
 
     @Id
     @Column(name = "company_symbol", length = 50)
@@ -15,7 +15,7 @@ public class Datos_Compañia {
     @OneToOne
     @MapsId  // PK compartida con la entidad principal
     @JoinColumn(name = "company_symbol")
-    private Datos_Empresa datosEmpresa;
+    private DatosEmpresa datosEmpresa;
 
     @Column(name = "moneda", length = 3)
     private String moneda;
@@ -59,11 +59,11 @@ public class Datos_Compañia {
         return moneda;
     }
 
-    public Datos_Empresa getDatosEmpresa() {
+    public DatosEmpresa getDatosEmpresa() {
         return datosEmpresa;
     }
 
-    public void setDatosEmpresa(Datos_Empresa datosEmpresa) {
+    public void setDatosEmpresa(DatosEmpresa datosEmpresa) {
         this.datosEmpresa = datosEmpresa;
     }
 

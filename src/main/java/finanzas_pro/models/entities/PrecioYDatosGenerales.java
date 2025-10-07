@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 
 @Entity
 @Table(name = "precio_y_datos_generales")
-public class Precio_Y_Datos_Generales {
+public class PrecioYDatosGenerales {
 
 
     @Id
@@ -17,7 +17,7 @@ public class Precio_Y_Datos_Generales {
     @OneToOne
     @MapsId
     @JoinColumn(name = "company_symbol")
-    private Datos_Empresa datosEmpresa;
+    private DatosEmpresa datosEmpresa;
 
     @Column(name = "Precio", precision = 36, scale = 16)
     private BigDecimal precio;
@@ -31,9 +31,8 @@ public class Precio_Y_Datos_Generales {
     @Column(name = "per_ttm", precision = 36, scale = 16)
     private BigDecimal perTtm;
 
-    @Enumerated(EnumType.STRING)
     @Column(name = "tamaño_mercado", columnDefinition = "ENUM('BIG CAP','MICRO CAP','MID CAP','SMALL CAP')")
-    private TamanoMercado tamanoMercado;
+    private String tamanoMercado;
 
     @Column(name = "market_cap")
     private Long marketCap;
@@ -41,9 +40,8 @@ public class Precio_Y_Datos_Generales {
     @Column(name = "valor_empresa")
     private Long valorEmpresa;
 
-    @Enumerated(EnumType.STRING)
     @Column(name = "situacion_caja", columnDefinition = "ENUM('CAJA NETA','DEUDA NETA')")
-    private SituacionCaja situacionCaja;
+    private String situacionCaja;
 
     @Column(name = "ultimo_dividendo", precision = 36, scale = 16)
     private BigDecimal ultimoDividendo;
@@ -57,10 +55,17 @@ public class Precio_Y_Datos_Generales {
     @Column(name = "maximo_52s", precision = 36, scale = 16)
     private BigDecimal maximo52s;
 
-    // Enums
-    public enum TamanoMercado {BIG_CAP, MICRO_CAP, MID_CAP, SMALL_CAP}
+    public String getTamanoMercado() {
+        return tamanoMercado;
+    }
 
-    public enum SituacionCaja {CAJA_NETA, DEUDA_NETA}
+    public void setTamanoMercado(String tamanoMercado) {
+        this.tamanoMercado = tamanoMercado;
+    }
+
+    public void setSituacionCaja(String situacionCaja) {
+        this.situacionCaja = situacionCaja;
+    }
 
     public String getCompanySymbol() {
         return companySymbol;
@@ -70,11 +75,11 @@ public class Precio_Y_Datos_Generales {
         this.companySymbol = companySymbol;
     }
 
-    public Datos_Empresa getDatosEmpresa() {
+    public DatosEmpresa getDatosEmpresa() {
         return datosEmpresa;
     }
 
-    public void setDatosEmpresa(Datos_Empresa datosEmpresa) {
+    public void setDatosEmpresa(DatosEmpresa datosEmpresa) {
         this.datosEmpresa = datosEmpresa;
     }
 
@@ -110,13 +115,6 @@ public class Precio_Y_Datos_Generales {
         this.perTtm = perTtm;
     }
 
-    public TamanoMercado getTamanoMercado() {
-        return tamanoMercado;
-    }
-
-    public void setTamanoMercado(TamanoMercado tamanoMercado) {
-        this.tamanoMercado = tamanoMercado;
-    }
 
     public Long getMarketCap() {
         return marketCap;
@@ -134,12 +132,9 @@ public class Precio_Y_Datos_Generales {
         this.valorEmpresa = valorEmpresa;
     }
 
-    public SituacionCaja getSituacionCaja() {
-        return situacionCaja;
-    }
 
-    public void setSituacionCaja(SituacionCaja situacionCaja) {
-        this.situacionCaja = situacionCaja;
+    public String getSituacionCaja() {
+        return situacionCaja;
     }
 
     public BigDecimal getUltimoDividendo() {

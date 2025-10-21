@@ -165,6 +165,7 @@ public class DatosCompaniaController {
     }
 
     //14. Recoger Valor intrinseco
+    @GetMapping("/valorIntrinseco")
     public ValorIntrinseco recogerValorIntrinseco(
             @RequestHeader("companySymbol")
             String companySymbol

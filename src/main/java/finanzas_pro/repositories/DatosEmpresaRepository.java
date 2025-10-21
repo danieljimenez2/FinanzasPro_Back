@@ -16,11 +16,12 @@ public interface DatosEmpresaRepository extends JpaRepository<DatosEmpresa, Stri
 
     List<DatosEmpresa> findAllBy();
 
+    DatosEmpresa findByCompanySymbol(String companySymbol);
+
     // Esto busca por id company_symbol
     List<DatosEmpresa> findByCompanySymbolContainingIgnoreCase(String companySymbolPart, Pageable pageable);
 
     // Esto busca por company_name
     List<DatosEmpresa> findByCompanyNameContainingIgnoreCase(String companyNamePart, Pageable pageable);
 
-    //Metodo para insertar
 }

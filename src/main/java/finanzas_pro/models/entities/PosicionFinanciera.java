@@ -50,8 +50,10 @@ public class PosicionFinanciera {
     @Column(name = "company_equity_multiplier", precision = 36, scale = 16)
     private BigDecimal companyEquityMultiplier;
 
+    /*
     @Column(name = "companyEquityMultiplier", precision = 36, scale = 16)
     private BigDecimal companyEquityMultiplierCamel;
+    */
 
     public String getCompanySymbol() {
         return companySymbol;
@@ -157,11 +159,12 @@ public class PosicionFinanciera {
         this.companyEquityMultiplier = companyEquityMultiplier;
     }
 
+    /*
     public BigDecimal getCompanyEquityMultiplierCamel() {
         return companyEquityMultiplierCamel;
     }
 
     public void setCompanyEquityMultiplierCamel(BigDecimal companyEquityMultiplierCamel) {
         this.companyEquityMultiplierCamel = companyEquityMultiplierCamel;
-    }
+    }*/
 }

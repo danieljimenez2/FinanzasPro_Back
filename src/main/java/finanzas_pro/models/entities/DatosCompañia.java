@@ -36,7 +36,7 @@ public class DatosCompañia {
     private String pais;
 
     @Column(name = "empleados")
-    private int empleados;
+    private Integer empleados;
 
     @Column(name = "CEO", length = 150)
     private String CEO;
@@ -44,6 +44,7 @@ public class DatosCompañia {
     @Column(name = "web", length = 200)
     private String web;
 
+    @Temporal(TemporalType.DATE)
     @Column(name = "fecha_Ipo")
     private Date fechaIpo;
 
@@ -111,11 +112,11 @@ public class DatosCompañia {
         this.pais = país;
     }
 
-    public int getEmpleados() {
+    public Integer getEmpleados() {
         return empleados;
     }
 
-    public void setEmpleados(int empleados) {
+    public void setEmpleados(Integer empleados) {
         this.empleados = empleados;
     }
 

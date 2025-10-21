@@ -17,19 +17,19 @@ public class MargenesDeLaCompañia {
     @JoinColumn(name = "company_symbol")
     private DatosEmpresa datosEmpresa;
 
-    @Column(name = "Margen Bruto", precision = 36, scale = 16)
+    @Column(name = "margen_bruto", precision = 36, scale = 16)
     private BigDecimal margenBruto;
 
-    @Column(name = "Margen Operativo", precision = 36, scale = 16)
+    @Column(name = "margen_operativo", precision = 36, scale = 16)
     private BigDecimal margenOperativo;
 
-    @Column(name = "Margen EBT", precision = 36, scale = 16)
+    @Column(name = "margen_ebt", precision = 36, scale = 16)
     private BigDecimal margenEBT;
 
-    @Column(name = "Margen Neto", precision = 36, scale = 16)
+    @Column(name = "margen_neto", precision = 36, scale = 16)
     private BigDecimal margenNeto;
 
-    @Column(name = "Tasa Impuesto", precision = 36, scale = 16)
+    @Column(name = "tasa_impuesto", precision = 36, scale = 16)
     private BigDecimal tasaImpuesto;
 
     public String getCompanySymbol() {

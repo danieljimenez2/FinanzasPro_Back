@@ -13,7 +13,7 @@ import java.math.BigDecimal;
 public class Favoritos {
 
     @Id
-    @Column(name = "companySymbol")
+    @Column(name = "company_symbol")
     private String companySymbol;
 
     @Column(name = "CompanyName")
@@ -50,4 +50,99 @@ public class Favoritos {
     private BigDecimal payoutRatioTtm;
 
 
+    public String getCompanySymbol() {
+        return companySymbol;
+    }
+
+    public void setCompanySymbol(String companySymbol) {
+        this.companySymbol = companySymbol;
+    }
+
+    public String getCompanyName() {
+        return companyName;
+    }
+
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
+    }
+
+    public BigDecimal getPerTtm() {
+        return perTtm;
+    }
+
+    public void setPerTtm(BigDecimal perTtm) {
+        this.perTtm = perTtm;
+    }
+
+    public String getSituacionCaja() {
+        return situacionCaja;
+    }
+
+    public void setSituacionCaja(String situacionCaja) {
+        this.situacionCaja = situacionCaja;
+    }
+
+    public BigDecimal getEvFcf() {
+        return evFcf;
+    }
+
+    public void setEvFcf(BigDecimal evFcf) {
+        this.evFcf = evFcf;
+    }
+
+    public BigDecimal getRoce() {
+        return roce;
+    }
+
+    public void setRoce(BigDecimal roce) {
+        this.roce = roce;
+    }
+
+    public BigDecimal getRatioDeuda() {
+        return ratioDeuda;
+    }
+
+    public void setRatioDeuda(BigDecimal ratioDeuda) {
+        this.ratioDeuda = ratioDeuda;
+    }
+
+    public BigDecimal getLiquidez() {
+        return liquidez;
+    }
+
+    public void setLiquidez(BigDecimal liquidez) {
+        this.liquidez = liquidez;
+    }
+
+    public BigDecimal getMargenBruto() {
+        return margenBruto;
+    }
+
+    public void setMargenBruto(BigDecimal margenBruto) {
+        this.margenBruto = margenBruto;
+    }
+
+    public BigDecimal getMargenNeto() {
+        return margenNeto;
+    }
+
+    public void setMargenNeto(BigDecimal margenNeto) {
+        this.margenNeto = margenNeto;
+    }
+
+    public BigDecimal getDividendYieldTtm() {
+        return dividendYieldTtm;
+    }
+
+    public void setDividendYieldTtm(BigDecimal dividendYieldTtm) {
+        this.dividendYieldTtm = dividendYieldTtm;
+    }
+
+    public BigDecimal getPayoutRatioTtm() {
+        return payoutRatioTtm;
+    }
+
+    public void setPayoutRatioTtm(BigDecimal payoutRatioTtm) {
+        this.payoutRatioTtm = payoutRatioTtm;
+    }
 }

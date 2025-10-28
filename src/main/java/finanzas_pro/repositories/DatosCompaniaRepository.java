@@ -9,4 +9,8 @@ public interface DatosCompaniaRepository extends JpaRepository<DatosCompañia, S
     DatosCompañia findByCompanySymbol(String companySymbol);
 
     Page<DatosCompañia> findBySector(String sector, Pageable page);
+
+    Page<DatosCompañia> findByPais(String pais, Pageable page);
+
+    Page<DatosCompañia> findByBolsa(String bolsa, Pageable page);
 }

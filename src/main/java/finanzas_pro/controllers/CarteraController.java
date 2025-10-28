@@ -38,7 +38,9 @@ public class CarteraController {
     }
 
     @GetMapping("/lista")
-    public List<Favoritos> recogerListaCartera() {
-        return carteraService.obtenerFavoritos();
+    public List<Favoritos> recogerListaCartera(@RequestParam(defaultValue = "0") int pagina) {
+        return carteraService.obtenerFavoritosPageable(pagina);
     }
+
+
 }

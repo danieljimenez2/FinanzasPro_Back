@@ -27,4 +27,25 @@ public class MercadosController {
         List<Map<String, Object>> resultados = mercadosService.recogerListaEmpresasPorSector(sector, page);
         return ResponseEntity.ok(resultados);
     }
+
+    @GetMapping("/pais")
+    public ResponseEntity<List<Map<String, Object>>> recoger10EmpresasDePais(
+            @RequestHeader("pais")
+            String pais,
+            @RequestHeader(value = "page", defaultValue = "0") int page
+    ) {
+        List<Map<String, Object>> resultados = mercadosService.recogerListaEmpresasPorPais(pais, page);
+        return ResponseEntity.ok(resultados);
+    }
+
+    @GetMapping("/bolsa")
+    public ResponseEntity<List<Map<String, Object>>> recoger10EmpresasDeBolsa(
+            @RequestHeader("bolsa")
+            String bolsa,
+            @RequestHeader(value = "page", defaultValue = "0") int page
+    ) {
+        List<Map<String, Object>> resultados = mercadosService.recogerListaEmpresasPorBolsa(bolsa, page);
+        return ResponseEntity.ok(resultados);
+    }
+
 }

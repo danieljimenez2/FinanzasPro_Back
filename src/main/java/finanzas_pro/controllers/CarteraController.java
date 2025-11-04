@@ -3,6 +3,7 @@ package finanzas_pro.controllers;
 import finanzas_pro.models.entities.Favoritos;
 import finanzas_pro.services.CarteraService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -42,5 +43,10 @@ public class CarteraController {
         return carteraService.obtenerFavoritosPageable(pagina);
     }
 
+    @GetMapping("/contar")
+    public ResponseEntity<Long> contarResultados() {
+        long resultado = this.carteraService.contarNumeroFavoritos();
+        return ResponseEntity.ok(resultado);
+    }
 
 }

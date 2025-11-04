@@ -13,4 +13,12 @@ public interface DatosCompaniaRepository extends JpaRepository<DatosCompañia, S
     Page<DatosCompañia> findByPais(String pais, Pageable page);
 
     Page<DatosCompañia> findByBolsa(String bolsa, Pageable page);
+
+    Page<DatosCompañia> findByPaisAndSector(String pais, String sector, Pageable page);
+
+    int countByPais(String pais);
+
+    int countBySector(String sector);
+
+    int countByBolsa(String bolsa);
 }

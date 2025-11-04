@@ -113,4 +113,8 @@ public class CarteraService {
     public boolean comprobarSiEsFavorito(String companySymbol) {
         return favoritosRepository.existsById(companySymbol);
     }
+
+    public Long contarNumeroFavoritos() {
+        return this.favoritosRepository.count();
+    }
 }

@@ -48,4 +48,28 @@ public class MercadosController {
         return ResponseEntity.ok(resultados);
     }
 
+    @GetMapping("/consulta")
+    public ResponseEntity<List<Map<String, Object>>> consultarPaisSector(
+            @RequestHeader("pais")
+            String pais,
+            @RequestHeader("sector")
+            String sector,
+            @RequestHeader(value = "page", defaultValue = "0") int page
+    ) {
+        List<Map<String, Object>> resultados = mercadosService.consultarEmpresasPaisSector(pais, sector, page);
+        return ResponseEntity.ok(resultados);
+    }
+
+    @GetMapping("/contar")
+    public ResponseEntity<Long> consultarNumeroResultados(
+            @RequestHeader(value = "pais", required = false)
+            String pais,
+            @RequestHeader(value = "sector", required = false)
+            String sector,
+            @RequestHeader(value = "bolsa", required = false)
+            String bolsa
+    ) {
+        long numero = mercadosService.consultarNumeroDeResultados(pais, sector, bolsa);
+        return ResponseEntity.ok(numero);
+    }
 }
